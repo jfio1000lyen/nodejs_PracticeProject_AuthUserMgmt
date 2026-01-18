@@ -106,6 +106,11 @@ app.post("/register", (req, res) => {
     return res.status(404).json({message: "Unable to register user."});
 });
 
+// Main endpoint to be accessed by authentificated users
+app.get("/auth/get_message", (req, res) => {
+    return res.status(202).json({message: "Hello, you are an authentificated user. Congratulations!"});
+});
+
 
 const PORT =5000;
 
